@@ -3,7 +3,7 @@
 int main(int argc, char *argv[])
 {
 	unsigned char Hash[32]={0};
-	char* str="abc";
+	char* str="1212121212121212121212121212121212121212121212121212121212121212";
 	int len;
 	len=strlen(str);
 	if(!SM3(str, len, Hash))
