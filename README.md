@@ -29,3 +29,18 @@ $W_j'  = W_j \oplus W_{j+4}$
 
 ### 压缩函数
 对于压缩函数这个部分，并没有采取有效的优化。因为压缩函数属于一种线性的计算，本轮的处理好的数据会作用到下一轮之中，若要采用并行的优化方法是不能直接实现的，所以在这并没有深度研究下去。
+
+##结果对比
+最后我们将优化前和优化后的性能测试进行对比，如下图所示：
+
+优化前：
+
+![This is an image](https://github.com/ziyizhou0813/SM3-optimization/blob/sm3-v2/%E4%BC%98%E5%8C%96%E5%89%8D.png)
+
+优化后：
+
+![This is an image](https://github.com/ziyizhou0813/SM3-optimization/blob/sm3-v2/%E4%BC%98%E5%8C%96%E5%90%8E.png)
+
+我们发现在基于SIMD优化后的消息扩展的SM3算法快了0.1秒左右。
+
+因为这是加密一组的结果，若对于更大的数据，这0.1的优化则会带来更好性能提升。
